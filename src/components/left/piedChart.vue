@@ -1,6 +1,7 @@
 <template>
   <div class="water-eval-container">
     <div class="cityGreenLand-charts" id="cityGreenLand-charts"></div>
+    <div class="text">智能回收站 <span>6585 kg</span></div>
   </div>
 </template>
 
@@ -8,7 +9,7 @@
 import echarts from "echarts";
 import "echarts-gl";
 export default {
-  name: "cityGreenLand",
+  name: "piedChart",
   components: {},
   data() {
     return {
@@ -173,11 +174,12 @@ export default {
         legend: {
           data: legendData,
           orient: 'vertical',//提示位置
-          left: 10,
-          top: 10,
-          itemGap: 10,
+          left: 5,
+          top: 15,
+          itemGap: 5,
           textStyle: {
-            color: "#A1E2FF"
+            color: "#A1E2FF",
+            
           },
           show: true,
           icon: "circle",
@@ -226,6 +228,8 @@ export default {
           max: 1
         },
         grid3D: {
+          left: 50,
+          top: -20,          
           show: false,
           boxHeight: boxHeight, //圆环的高度
           viewControl: {
@@ -501,6 +505,10 @@ export default {
 }
 .cityGreenLand-charts {
   height: 200px;
-  width: 400px;
+  width: 225px;
+}
+.text{
+      margin: -51px 0 0 10px;
+      font-size: .875rem;
 }
 </style>

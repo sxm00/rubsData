@@ -1,56 +1,61 @@
 <template>
-  <div id="centerLeft1">
-    <div class="bg-color-black">
-      <div class="d-flex pt-2 pl-2">
-        <span style="color:#5cd9e8">
-          <icon name="chart-pie"></icon>
-        </span>
-        <div class="d-flex">
-          <span class="fs-xl text mx-2">地图数据</span>
-          <dv-decoration-1 style="width:1.25rem;height:.25rem; position:relative;top:-.0375rem;" />
+  <div class="up">
+    <dv-border-box-13 style="width:480px;height:200px;">
+      <div class="list">
+        <div class="item">
+          <piedChart></piedChart>
         </div>
+        <div class="item">
+          <!-- <piedChart1></piedChart1> -->
+        </div>        
       </div>
-      <div class="d-flex jc-center">
-        <CenterLeft2Chart />
+    </dv-border-box-13>
+    <dv-border-box-13 style="width:480px;height:200px;"> 
+      <div class="list">
+        <div class="item">
+          <!-- <waterChart></waterChart> -->
+        </div>
+        <div class="item">
+          <!-- <waterChart1></waterChart1> -->
+        </div>         
       </div>
-    </div>
+    </dv-border-box-13>    
   </div>
 </template>
 
 <script>
-import CenterLeft2Chart from "@/components/echart/centerLeft/centerLeft2Chart";
+// 3d饼图
+import piedChart from "@/components/left/piedChart";
+import piedChart1 from "@/components/left/piedChart1";
+import waterChart from "@/components/left/waterChart";
+import waterChart1 from "@/components/left/waterChart1";
 export default {
+  name: "centerLeft2",
   data() {
     return {};
   },
   components: {
-    CenterLeft2Chart
+ piedChart,
+ piedChart1,
+ waterChart,
+ waterChart1
+
+
   },
   mounted() {},
   methods: {}
 };
 </script>
 
-<style lang="scss">
-#centerLeft1 {
-  padding: 0.2rem;
-  height: 5.125rem;
-  min-width: 3.75rem;
-  border-radius: 0.0625rem;
-  .bg-color-black {
-    height: 4.8125rem;
-    border-radius: 0.125rem;
-  }
-  .text {
-    color: #c3cbde;
-  }
-  .chart-box {
-    margin-top: 0.2rem;
-    width: 2.125rem;
-    height: 2.125rem;
-    .active-ring-name {
-      padding-top: 0.125rem;
-    }
+<style lang="scss" scoped>
+.up{
+ display: flex;
+  justify-content: space-around;
+  .list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.625rem;
+    box-sizing: border-box;
   }
 }
 </style>

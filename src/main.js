@@ -18,7 +18,7 @@ import 'vue-awesome/icons/align-left.js';
 Vue.component('icon', Icon);
 
 // 适配flex
-import '@/common/flexible.js';
+// import '@/common/flexible.js';
 
 // 引入全局css
 import '@/assets/scss/style.scss';

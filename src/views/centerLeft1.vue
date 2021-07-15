@@ -1,136 +1,197 @@
 <template>
-  <div id="centerLeft1">
-    <div class="bg-color-black">
-      <div class="d-flex pt-2 pl-2">
-        <span style="color:#5cd9e8">
-          <icon name="chart-bar"></icon>
-        </span>
-        <div class="d-flex">
-          <span class="fs-xl text mx-2">任务通过率</span>
-          <dv-decoration-3 style="width:1.25rem;height:.25rem; position:relative;top:-.0375rem;" />
+  <div class="top">
+    <dv-border-box-7 style="width:100%;height:5.75rem">
+      <div class="list">
+        <div class="item">
+          <p class="tit">用户数</p>
+          <p class="p1">
+            <countTo
+              :startVal="startVal"
+              :endVal="endVal1"
+              :duration="duration"
+            ></countTo>
+            <span>人</span>
+          </p>
         </div>
+        <div class="item">
+          <p class="tit">设备数</p>
+          <p class="p1">
+            <countTo
+              :startVal="startVal"
+              :endVal="endVal2"
+              :duration="duration"
+              :decimals="decimals"
+            ></countTo>
+            <span>台</span>
+          </p>
+        </div>
+        <div class="item">
+          <p class="tit">智能垃圾箱投递量</p>
+          <p class="p1">
+            <countTo
+              :startVal="startVal"
+              :endVal="endVal3"
+              :duration="duration"
+            ></countTo>
+            <span>t</span>
+          </p>
+        </div>
+        <div class="item">
+          <p class="tit">小区数</p>
+          <p class="p1">
+            <countTo
+              :startVal="startVal"
+              :endVal="endVal4"
+              :duration="duration"
+            ></countTo>
+            <span>个</span>
+          </p>
+        </div>
+        <div class="item">
+          <p class="tit">家庭组</p>
+          <p class="p1">
+            <countTo
+              :startVal="startVal"
+              :endVal="endVal5"
+              :duration="duration"
+            ></countTo>
+            <span>户</span>
+          </p>
+        </div>                
       </div>
-      <div class="d-flex jc-center">
-        <CenterLeft1Chart />
-      </div>
-      <!-- 4个主要的数据 -->
-      <div class="bottom-data">
-        <div class="item-box" v-for="(item,index) in numberData" :key="index">
-          <div class="d-flex">
-            <span class="coin">￥</span>
-            <dv-digital-flop :config="item.number" style="width:2.5rem;height:.625rem;" />
-          </div>
-          <p class="text" style="text-align: center;">
-            {{item.text}}
-            <span class="colorYellow">(件)</span>
+    </dv-border-box-7>
+    <!-- <dv-border-box-8 style="width:100%;height:3.75rem">
+      <div class="list">
+        <div class="item lf">
+          <p class="p1">
+            用户数
+            <countTo
+              :startVal="startVal"
+              :endVal="endVal4"
+              :duration="duration"
+            ></countTo>
+            <span>人</span>
+          </p>
+          <p class="p1">
+            家庭组
+            <countTo
+              :startVal="startVal"
+              :endVal="endVal5"
+              :duration="duration"
+            ></countTo>
+            <span>户</span>
+          </p>
+        </div>
+        <div class="item lf">
+          <p class="p1">
+            智能回收站投递量
+            <countTo
+              :startVal="startVal"
+              :endVal="endVal6"
+              :duration="duration"
+              :decimals="decimals"
+            ></countTo>
+            <span>t</span>
+          </p>
+          <p class="p1">
+            智能垃圾箱投递量
+            <countTo
+              :startVal="startVal"
+              :endVal="endVal7"
+              :duration="duration"
+              :decimals="decimals"
+            ></countTo>
+            <span>t</span>
+          </p>
+        </div>
+        <div class="item lf">
+          <p class="p1">
+            设备数
+            <countTo
+              :startVal="startVal"
+              :endVal="endVal8"
+              :duration="duration"
+            ></countTo>
+            <span>台</span>
+          </p>
+          <p class="p1">
+            小区数
+            <countTo
+              :startVal="startVal"
+              :endVal="endVal9"
+              :duration="duration"
+            ></countTo>
+            <span>个</span>
           </p>
         </div>
       </div>
-    </div>
+    </dv-border-box-8> -->
   </div>
 </template>
 
 <script>
-import CenterLeft1Chart from "@/components/echart/centerLeft/centerLeft1Chart";
+// 数字滚动
+import countTo from "vue-count-to";
 export default {
   data() {
     return {
-      numberData: [
-        {
-          number: {
-            number: [15],
-            toFixed: 1,
-            content: "{nt}"
-          },
-          text: "今日构建总量"
-        },
-        {
-          number: {
-            number: [1144],
-            toFixed: 1,
-            content: "{nt}"
-          },
-          text: "总共完成数量"
-        },
-        {
-          number: {
-            number: [361],
-            toFixed: 1,
-            content: "{nt}"
-          },
-          text: "正在编译数量"
-        },
-        {
-          number: {
-            number: [157],
-            toFixed: 1,
-            content: "{nt}"
-          },
-          text: "未通过数量"
-        }
-      ]
+      // 数字滚动
+      // 需要滚动的时间
+      duration: 5000,
+      // 初始值
+      startVal: 0,
+      // 最终值
+      endVal1: 30,
+      endVal2: 297,
+      endVal3: 4730,
+      endVal4: 74576,
+      endVal5: 53397,
+      endVal6: 2204,
+      endVal7: 18.96,
+      endVal8: 448,
+      endVal9: 89,
+      decimals: 2
     };
   },
   components: {
-    CenterLeft1Chart
+    countTo
   },
-  mounted() {
-    this.changeTiming();
-  },
-  methods: {
-    changeTiming() {
-      setInterval(() => {
-        this.changeNumber();
-      }, 3000);
-    },
-    changeNumber() {
-      this.numberData.forEach((item, index) => {
-        item.number.number[0] += ++index;
-        item.number = { ...item.number };
-      });
-    }
-  }
+  mounted() {},
+  methods: {}
 };
 </script>
 
-<style lang="scss">
-#centerLeft1 {
-  padding: 0.2rem;
-  height: 5.125rem;
-  min-width: 3.75rem;
-  border-radius: 0.0625rem;
-  .bg-color-black {
-    height: 4.8125rem;
-    border-radius: 0.125rem;
-  }
-  .text {
-    color: #c3cbde;
-  }
-  .chart-box {
-    margin-top: 0.2rem;
-    width: 2.125rem;
-    height: 2.125rem;
-    .active-ring-name {
-      padding-top: 0.125rem;
-    }
-  }
+<style lang="scss" scoped>
+.top {
+  display: flex;
+  justify-content: space-around;
+  .list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.625rem;
+    box-sizing: border-box;
 
-  .bottom-data {
-    .item-box {
-      float: right;
-      position: relative;
-      width: 50%;
-      color: #d3d6dd;
-      // 金币
-      .coin {
-        position: absolute;
-        left: 0.1rem;
-        top: 0.2125rem;
-        font-size: 0.25rem;
-        color: #ffc107;
+    .item {
+      padding: 0.125rem 0;
+      box-sizing: border-box;
+      text-align: center;
+      &.lf {
+        text-align: left;
       }
-      .colorYellow {
-        color: yellowgreen;
+      .tit {
+        font-size: 1.5rem;
+        color: #fff;
+        line-height: 3rem;
+        font-weight: bold;
+      }
+      .p1 {
+        font-size: 1rem;
+        color: #fff;
+        font-weight: bold;
+        span {
+          font-size: 1rem;
+          font-weight: bold;
+        }
       }
     }
   }

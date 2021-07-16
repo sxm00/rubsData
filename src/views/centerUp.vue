@@ -9,7 +9,7 @@
           <piedChart1></piedChart1>
         </div>   
         <div class="item">
-           <!-- <waterChart></waterChart> -->
+           <waterChart></waterChart>
         </div> 
         <div class="item">
           <!-- <waterChart1></waterChart1> -->

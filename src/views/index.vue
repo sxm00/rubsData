@@ -36,30 +36,43 @@
               <div>
                 <center></center>
               </div>
-              
+              <div>
+                <bottomLeft></bottomLeft>
+              </div>
+              <div>
+                <bottomLeft1></bottomLeft1>
+              </div>
             </div>
             <!-- 中间 -->
             <div class="middle">
-         <div class="d-flex jc-center jc-top">
-            <div class="title">
-              <span class="title-text">瓜子壳垃圾分类数据监管平台</span>
-              <dv-decoration-6
-                class="title-bototm"
-                :reverse="true"
-                :color="['#50e3c2', '#67a1e5']"
-                style="width:17rem;height:1rem;"
-              />
+              <div class="d-flex jc-center jc-top" style="width:100%;height:5.55rem;">
+                  <div class="title">
+                    <span class="title-text">瓜子壳垃圾分类数据监管平台</span>
+                    <dv-decoration-6
+                      class="title-bototm"
+                      :reverse="true"
+                      :color="['#50e3c2', '#67a1e5']"
+                      style="width:17rem;height:1rem;"
+                    />
+                  </div>
+              </div>   
+              <div>
+                <middle></middle>
+              </div>         
             </div>
-
-        </div>             
-            </div>
-            <!-- 中间 -->
+            <!-- 右侧 -->
             <div class="right">
-        <div class="d-flex jc-center">
-            <div>
-               <span class="timeD">{{dateYear}} {{dateWeek}} {{dateDay}}</span>
-            </div>
-        </div>        
+              <div class="d-flex jc-center" style="width:100%;height:5.55rem">
+                  <div>
+                    <span class="timeD">{{dateYear}} {{dateWeek}} {{dateDay}}</span>
+                  </div>
+              </div>   
+              <div>
+                <rightTop></rightTop>
+              </div> 
+              <div>
+               <bottomRight></bottomRight>
+              </div>    
             </div>
           </div>
         </div>
@@ -75,6 +88,11 @@ import { formatTime } from '@/utils/index.js'
 import center from "./center";
 import centerTop from "./centerTop";
 import centerUp from "./centerUp";
+import bottomLeft from "./bottomLeft";
+import bottomLeft1 from "./bottomLeft1";
+import middle from './middle.vue';
+import rightTop from './rightTop.vue';
+import bottomRight from './bottomRight.vue';
 export default {
   data () {
     return {
@@ -90,7 +108,12 @@ export default {
   components: {
 center,
 centerTop,
-centerUp
+centerUp,
+bottomLeft,
+bottomLeft1,
+    middle,
+    rightTop,
+    bottomRight
   },
   mounted () {
     this.timeFn();

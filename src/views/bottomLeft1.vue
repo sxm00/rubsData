@@ -2,7 +2,7 @@
   <div id="center">
     <dv-border-box-13 style="width:480px;height:260px;">
       <div class="list">
-        <!-- <lineChart></lineChart> -->
+        
       </div>
     </dv-border-box-13>
     <dv-border-box-13 style="width:480px;height:260px;">

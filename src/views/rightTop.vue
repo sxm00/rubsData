@@ -1,15 +1,11 @@
 <template>
   <div id="center">
-    <dv-border-box-13 style="width:480px;height:260px;">
-      <div class="list">
-        <!-- <lineChart></lineChart> -->
+    <dv-border-box-13 style="width:100%;height:450px;">
+      <div class="mapBox">
+
       </div>
     </dv-border-box-13>
-    <dv-border-box-13 style="width:480px;height:260px;">
-      <div class="list">
-       
-      </div>
-    </dv-border-box-13>    
+  
   </div>
 </template>
 
@@ -32,7 +28,7 @@ lineChart
 #center {
   display: flex;
   justify-content: space-around;
-  .list{
+  .mapBox{
     display: flex;
     justify-content: space-between;
     padding: 0.625rem;

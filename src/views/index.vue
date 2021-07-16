@@ -27,15 +27,16 @@
             <div class="left">
               <!-- 头部 -->
               <div>
-              <centerLeft1></centerLeft1>    
+              <centerTop></centerTop>    
               </div>
 
               <div>
-                <centerLeft2></centerLeft2>   
+                <centerUp></centerUp>   
               </div>
               <div>
                 <center></center>
               </div>
+              
             </div>
             <!-- 中间 -->
             <div class="middle">
@@ -72,8 +73,8 @@ import { formatTime } from '@/utils/index.js'
 
 // 左侧
 import center from "./center";
-import centerLeft1 from "./centerLeft1";
-import centerLeft2 from "./centerLeft2";
+import centerTop from "./centerTop";
+import centerUp from "./centerUp";
 export default {
   data () {
     return {
@@ -88,8 +89,8 @@ export default {
   },
   components: {
 center,
-centerLeft1,
-centerLeft2
+centerTop,
+centerUp
   },
   mounted () {
     this.timeFn();

@@ -7,7 +7,7 @@
     </dv-border-box-13>
     <dv-border-box-13 style="width:480px;height:250px;">
       <div class="list">
-       
+       <!-- <centerTotal></centerTotal> -->
       </div>
     </dv-border-box-13>    
   </div>
@@ -15,7 +15,7 @@
 
 <script>
 import tableScroll from "@/components/left/tableScroll";
-
+import centerTotal from "@/components/left/centerTotal";
 export default {
   data () {
     return {
@@ -23,7 +23,8 @@ export default {
     };
   },
   components: {
-tableScroll
+tableScroll,
+centerTotal
   }
 };
 </script>

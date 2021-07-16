@@ -3,8 +3,8 @@
     <Echart
       :options="options"
       id="centreLeft1Chart"
-      height="2.75rem"
-      width="3.25rem"
+      height="12rem"
+      width="300px"
     ></Echart>
   </div>
 </template>
@@ -60,7 +60,7 @@ export default {
           },
           series: [
             {
-              name: "通过率统计",
+              name: "设备总台数",
               type: "pie",
               radius: [10, 60],
               roseType: "area",

@@ -6,11 +6,11 @@
           <icon name="chart-line"></icon>
         </span>
         <div class="d-flex">
-          <span class="fs-xl  mx-2">实时投递用户</span>
+          <span class="fs-xl  mx-2" style="font-size:16px;padding:0 10px">实时投递用户</span>
         </div>
       </div>
       <div class="d-flex jc-center body-box">
-        <dv-scroll-board :config="config" style="width:100%;height:11rem;" />
+        <dv-scroll-board :config="config" style="width:100%;height:12rem;" />
       </div>
     </div>
   </div>
@@ -51,8 +51,8 @@ export default {
 <style lang="scss" scoped>
 #centerRight1 {
     width: 100%;
-  padding: 1.25rem 0;
-  height: 250px;
+     padding: 0.2rem;
+  height: 15.625rem;
   min-width: 6.75rem;
   border-radius:1rem;
   .bg-color-black {

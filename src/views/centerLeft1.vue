@@ -1,6 +1,6 @@
 <template>
   <div class="top">
-    <dv-border-box-7 style="width:100%;height:5.75rem">
+    <dv-border-box-7 style="width:100%;height:5.55rem">
       <div class="list">
         <div class="item">
           <p class="tit">用户数</p>
@@ -20,7 +20,7 @@
               :startVal="startVal"
               :endVal="endVal2"
               :duration="duration"
-              :decimals="decimals"
+              
             ></countTo>
             <span>台</span>
           </p>
@@ -32,6 +32,7 @@
               :startVal="startVal"
               :endVal="endVal3"
               :duration="duration"
+              :decimals="decimals"
             ></countTo>
             <span>t</span>
           </p>
@@ -179,9 +180,9 @@ export default {
         text-align: left;
       }
       .tit {
-        font-size: 1.5rem;
+        font-size: 1.35rem;
         color: #fff;
-        line-height: 3rem;
+        line-height: 2.8rem;
         font-weight: bold;
       }
       .p1 {

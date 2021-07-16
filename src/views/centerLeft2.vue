@@ -1,25 +1,31 @@
 <template>
   <div class="up">
-    <dv-border-box-13 style="width:480px;height:200px;">
+    <dv-border-box-13 style="width:100%;height:200px;">
       <div class="list">
         <div class="item">
           <piedChart></piedChart>
         </div>
         <div class="item">
-          <!-- <piedChart1></piedChart1> -->
-        </div>        
-      </div>
-    </dv-border-box-13>
-    <dv-border-box-13 style="width:480px;height:200px;"> 
-      <div class="list">
+          <piedChart1></piedChart1>
+        </div>   
         <div class="item">
-          <!-- <waterChart></waterChart> -->
-        </div>
+           <!-- <waterChart></waterChart> -->
+        </div> 
         <div class="item">
           <!-- <waterChart1></waterChart1> -->
+        </div>                      
+      </div>
+    </dv-border-box-13>
+    <!-- <dv-border-box-13 style="width:480px;height:200px;"> 
+      <div class="list">
+        <div class="item">
+          <waterChart></waterChart>
+        </div>
+        <div class="item">
+          <waterChart1></waterChart1>
         </div>         
       </div>
-    </dv-border-box-13>    
+    </dv-border-box-13>     -->
   </div>
 </template>
 
